@@ -1,1 +1,0 @@
-# Python Lab Sample Text
