@@ -12,6 +12,13 @@ print("Windows Size : " + str(w) + " x " + str(h))
 x,y = gui.position()
 print("Current x,y : " + str(x) + "," + str(y))
 
+
+# マウスカーソルの中央への移動
+gui.moveTo(x=(w/2),y=(h/2))
+x,y = gui.position()
+print("Point after moving x,y : " + str(x) + "," + str(y))
+gui.dragTo(x=(x/2)+100,y=(y/2)+100,button='left')
+
 # スクリーン範囲の確認
 check = gui.onScreen(100,100)
 #check = gui.onScreen(2000,3000)
@@ -20,13 +27,10 @@ if check:
 else:
     print("x=2000,y=3000 " + "off onScreen")
 
-# マウスカーソルの中央への移動
-gui.moveTo(x=960,y=540)
-x,y = gui.position()
-print("Point after moving x,y : " + str(x) + "," + str(y))
-
 # AlartBoxの表示
-gui.confirm(text="電卓アプリを最少サイズで開き画面に表示出来ましたか？", title="確認！",buttons=['OK', 'Cancel'])
+select = gui.confirm(text="電卓アプリを最少サイズで開き画面に表示出来ましたか？", title="確認！",buttons=['OK', 'Cancel'])
+if select in "Cancel":
+    exit(0)
 
 # 指定される画像をスクリーンから検出する
 try:
