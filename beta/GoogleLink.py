@@ -35,4 +35,3 @@ for a in list:
 
 # 受信データの全てを表示する
 # print soup.encode('cp932')
-
