@@ -1,27 +1,30 @@
 # -*- coding: UTF-8 -*-
 
 from datetime import datetime
-from pywinauto import application , Desktop
+from pywinauto import application
 from time import sleep
 
-app = application.Application(backend="win32") # Win32 API(Default 32bit App)
-#app = application.Application(backend="uia") # MS UI Automation
+# Win32 API(Default 32bit App)
+app = application.Application(backend="win32") 
 
 app.start("notepad.exe")
-# app.connect_(process = 2341) # ProcessConnect
+# アプリケーションのプロセスID
 print app.process
 
-#dlg = Desktop(backend="uia").Calculator
-#dlg.type_keys('2*3=')
-#dlg.print_control_identifiers()
-
 # 起動したアプリの Top Window の取得
-dialog = app.top_window_()
-#dialogs = app.window_()
+#dialog = app.top_window_() # TopWindow のダイアログ取得
+#dialog = app.Notepad # コンポーネント指定のダイアログ取得
+dialog = app[u'無題 - メモ帳'] # 指定 taitle のダイアログ取得
+dialog.PrintControlIdentifiers()
 
-dialog.print_control_identifiers()
-#dialogs.print_control_identifiers()
+print(u"=========================================")
 
-#for dig in dialogs:
-#    dig.print_control_identifiers
+# Main Window のメニュー操作(フォントダイアログを開く)
+dialog.MenuSelect(u"書式->フォント")
 
+# フォントダイアログの取得と制御要素の表示
+fontDialog = app[u"フォント"]
+fontDialog.PrintControlIdentifiers()
+
+# アプリケーションのプロセスの kill
+app.kill()
