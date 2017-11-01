@@ -12,15 +12,15 @@ app.start("notepad.exe")
 print app.process
 
 # 起動したアプリの Top Window の取得
-#dialog = app.top_window_() # TopWindow のダイアログ取得
-#dialog = app.Notepad # コンポーネント指定のダイアログ取得
-dialog = app[u'無題 - メモ帳'] # 指定 taitle のダイアログ取得
-dialog.PrintControlIdentifiers()
+#mainDialog = app.top_window_() # TopWindow のダイアログ取得
+#mainDialog = app.Notepad # コンポーネント指定のダイアログ取得
+mainDialog = app[u'無題 - メモ帳'] # 指定 taitle のダイアログ取得
+mainDialog.PrintControlIdentifiers()
 
 print(u"=========================================")
 
 # Main Window のメニュー操作(フォントダイアログを開く)
-dialog.MenuSelect(u"書式->フォント")
+mainDialog.MenuSelect(u"書式->フォント")
 
 # フォントダイアログの取得と制御要素の表示
 fontDialog = app[u"フォント"]
