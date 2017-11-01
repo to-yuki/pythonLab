@@ -23,14 +23,17 @@ class MyThread(threading.Thread):
         self.__sec = sec
 
 def main():
+    # T1 スレッドの作成と開始
     myThread = MyThread()
     myThread.setMsgSec("T1",1)
     myThread.start()
-    
+
+    # T1 スレッドの作成と開始
     myThread2 = MyThread()
     myThread2.setMsgSec("T2",2)
     myThread2.start()
     
+    # 各スレッドの待ち合わせ
     myThread.join()
     print(u"[T1 スレッド終了]")
     myThread2.join()
