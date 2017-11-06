@@ -40,3 +40,4 @@ except:
     except:
         pass
     print(u"メール送信エラーです。")
+    
