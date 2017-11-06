@@ -1,9 +1,13 @@
 # -*- coding: UTF-8 -*-
 
+# GMail簡易送信モジュール
 import gmail
 
+# GMailアカウント情報
 sendUsername = #u"from_user@gmail.com"
 sendUserPassword = #u"from_user_password"
+
+# メール送信パラメータ
 subject = u"件名"
 toAddr = #u"to_user@gmail.com"
 body = u"本文" 
