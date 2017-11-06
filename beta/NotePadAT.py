@@ -42,7 +42,7 @@ if confirmDialog.Exists():
     # ボタンをクリック(タイミングにより反応しな場合はもう一度)
     # confirmButtion.Click()  
 
-# キーストロークを使って終了
+# メニューの終了を選択
 sleep(sleepSec) 
 # Window のデータ更新が終わるのを待って終了
 app.Notepad.MenuSelect(u"ファイル->メモ帳の終了")

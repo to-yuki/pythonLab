@@ -23,8 +23,8 @@ if select in "OK":
     x,y = gui.position()
     print("Point after moving x,y : " + str(x) + "," + str(y))
     gui.dragTo(x=(x/2)+100,y=(y/2)+100,button='left')
-    #gui.mouseDown(button='left')
-    #gui.mouseUp(button='left',x=(x/2)+100,y=(y/2)+100)
+    # gui.mouseDown(button='left')
+    # gui.mouseUp(button='left',x=(x/2)+100,y=(y/2)+100)
 
 # スクリーン範囲の確認
 check = gui.onScreen(100,100)
