@@ -16,7 +16,6 @@ body = u"本文"
 # メールサーバに接続して、ログインとメール送信
 try:
     print(u"メール送信開始")
-
     # ユーザ名とパスワードの入力
     print(u"MailAccount: "),
     sendUsername = raw_input()
@@ -31,7 +30,6 @@ try:
     message = gmail.Message(subject=subject,to=toAddr,text=body)
     client.send(message)
     client.close()
-
     print(u"メール送信完了!")
 except:
     # メール送信エラー時の対処
