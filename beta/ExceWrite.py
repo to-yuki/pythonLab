@@ -21,14 +21,18 @@ for i in range(2,101):
 newSheet = book.create_sheet(index=1,title=u"フォントサンプル")
 newSheet["B2"] = u"Python入門"
 
-# セルのプロパティ調整
+# セルのプロパティオブジェクトの作成
+# フォントオブジェクト
 customFont = Font(name=u"メイリオ",bold=True,italic=True,size=24,color="00F00000")
+# フィルオブジェクト
 customFill = PatternFill(patternType="solid", start_color="30F0F0F0", end_color="BBBB0000")
+# 罫線のオブジェクト
 customborder = Border(outline=True,
                         left=Side(style="thin", color="FF000000"),
                         right=Side(style="thin", color="FF000000"),
                         top=Side(style="thin", color="FF000000"),
                         bottom=Side(style="thin", color="FF000000"))
+# B2 セルに各オブジェクトを設定して調整
 newSheet[u"B2"].font = customFont
 newSheet[u"B2"].fill = customFill
 newSheet[u"B2"].border = customborder
@@ -36,10 +40,6 @@ newSheet[u"B2"].border = customborder
 # セルの幅調整
 newSheet.row_dimensions[2].height=60
 newSheet.column_dimensions[u"B"].width=30
-
-# 罫線の調整
-
-
 
 # ワークブックの保存
 book.save("newBook.xlsx")
