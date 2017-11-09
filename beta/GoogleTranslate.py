@@ -14,27 +14,10 @@ response = requests.get(url, params={'q': origin})
 # resopnse 内にある JavaScript コードから翻訳された
 # 文字列を取得 TRANSLATED_TEXT='(翻訳されて文字列)'
 pattern = r"TRANSLATED_TEXT='(.*?)'"
-result = re.search(pattern,response.text).group(1)
+transValue = re.search(pattern,response.text).group(1)
 
 print(u"\n[translate.google.com] で翻訳") 
 print(u"英語:"), 
 print(origin)
 print(u"日本語:"), 
-print(result)
-
-#soup = BeautifulSoup(response.text, "html.parser")
-#list = soup.find_all("script")
-
-#text = list[9].string
-#words=text.split(";")
-#print(words[13].encode("cp932"))
-
-#count = 0
-#for s in words:
-#    try:
-#        print(str(count)+"======================")
-#        print(s.encode("cp932"))
-#        count=count+1
-#    except:
-#        count=count+1
-#        pass
+print(transValue)
