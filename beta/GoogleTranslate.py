@@ -1,8 +1,6 @@
 # -*- coding: UTF-8 -*-
 import requests
 import re
-
-from bs4 import BeautifulSoup
  
 origin = 'Automate your work with Python.'
 url = 'https://translate.google.com/?hl=ja#en/ja/'
