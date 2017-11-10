@@ -8,8 +8,6 @@ url = "http://google.co.jp/"
 # Webサイトへアクセスし、レスポンスが戻ります(<html>...</html>)
 html = urllib2.urlopen(url)
 
-print(type(html))
-    
 # htmlドキュメントを解析
 soup = BeautifulSoup(html, "html.parser")
 

@@ -2,8 +2,8 @@
 import requests
 import re
  
-origin = 'Automate your work with Python.'
-url = 'https://translate.google.com/?hl=ja#en/ja/'
+origin = u'Automate your work with Python.'
+url = u'https://translate.google.com/?hl=ja#en/ja/'
 response = requests.get(url, params={'q': origin})
 
 # 受信データを全て表示する
