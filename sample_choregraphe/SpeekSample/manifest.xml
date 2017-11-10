@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package version="0.0.1" uuid="speeksample-e98e3f">
+ <names>
+  <name lang="en_US">SpeekSample</name>
+ </names>
+ <descriptions>
+  <description lang="en_US">Python Sample Project</description>
+ </descriptions>
+ <supportedLanguages>
+  <language>en_US</language>
+  <language>ja_JP</language>
+ </supportedLanguages>
+ <descriptionLanguages>
+  <language>en_US</language>
+  <language>ja_JP</language>
+ </descriptionLanguages>
+ <contents>
+  <behaviorContent path="PythonSample">
+   <nature>interactive</nature>
+   <names>
+    <name lang="en_US">PythonSample</name>
+   </names>
+   <tags>
+    <tag lang="ja_JP">PythonSample</tag>
+   </tags>
+   <permissions/>
+  </behaviorContent>
+ </contents>
+ <requirements>
+  <naoqiRequirement/>
+ </requirements>
+</package>
