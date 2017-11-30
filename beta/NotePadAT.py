@@ -27,7 +27,7 @@ nameSaveDialog.Edit.SetText(u"datetime.txt")
 saveButtion = nameSaveDialog[u'保存(&S)']
 # 保存ボタンをクリック
 saveButtion.Click()
-# ボタンをクリック(タイミングにより反応しな場合はもう一度) 
+# ボタンをクリック(タイミングにより反応しない場合はもう一度) 
 saveButtion.Click() 
 
 # ファイルが存在すれば上書きの確認ウィンドが開く
@@ -39,7 +39,7 @@ if confirmDialog.Exists():
     confirmButtion = confirmDialog[u'はい(&Y)']
     # ボタンをクリック
     confirmButtion.Click()
-    # ボタンをクリック(タイミングにより反応しな場合はもう一度)
+    # ボタンをクリック(タイミングにより反応しない場合はもう一度)
     # confirmButtion.Click()  
 
 # メニューの終了を選択

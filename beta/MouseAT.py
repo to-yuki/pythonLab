@@ -37,7 +37,7 @@ else:
 # 電卓で計算する
 calc = application.Application()
 calc.start("calc.exe")
-select = gui.confirm(text="電卓アプリを最少画面で表示してください。", title="確認！",buttons=['OK', 'Cancel'])
+select = gui.confirm(text="電卓アプリを最小画面で表示してください。", title="確認！",buttons=['OK', 'Cancel'])
 if select in "OK":
     # 指定される画像をスクリーンから検出する
     try:
