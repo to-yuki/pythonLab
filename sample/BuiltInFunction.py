@@ -6,7 +6,7 @@ print('World!')
 count = len('Python')
 print(count) # count String : 6
 
-list = [1,2,3,4]
+list = range(1,5,1)
 
 count = len(list)
 print(count) # count list : 4
