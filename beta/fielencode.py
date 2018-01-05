@@ -6,11 +6,7 @@ import sys,codecs
 with codecs.open('cp932file.txt','w','cp932') as f:
     f.write(u'こんにちは')
 
-print 'こんにちは ',
-print type('こんにちは')
-print u'こんにちは ',
-print type(u'こんにちは')
+print 'こんにちは '
+print u'こんにちは '
 
-print type("こんにちは")
-print u"こんにちは ".encode('cp932'),
-print type(u"こんにちは".encode('cp932'))
+print u'こんにちは '.encode('cp932')
