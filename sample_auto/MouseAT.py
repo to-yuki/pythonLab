@@ -3,7 +3,7 @@
 
 import pyautogui as gui
 from pywinauto import application
-import time
+from time import sleep
 
 # Windowsサイズの取得
 w,h = gui.size()
@@ -16,6 +16,7 @@ print("Current x,y : " + str(x) + "," + str(y))
 # Paintアプリケーションに描画する
 mspaint = application.Application()
 mspaint.start("mspaint.exe")
+sleep(3)
 select = gui.confirm(text="ペイントアプリを画面中央表示して、\n直線を選択してください。", title="確認！",buttons=['OK', 'Cancel'])
 if select in "OK":
     # マウスカーソルの中央への移動
