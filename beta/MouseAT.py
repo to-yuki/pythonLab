@@ -41,19 +41,19 @@ select = gui.confirm(text="電卓アプリを最小画面で表示してくだ�
 if select in "OK":
     # 指定される画像をスクリーンから検出する
     try:
-        x,y,width,height = gui.locateOnScreen('c.png', grayscale=True)
+        x,y,width,height = gui.locateOnScreen('c.png', grayscale=False)
         print("c.png Found!: x=" + str(x) + ",y=" + str(y) + ",width=" + str(width) + ",height=" + str(height))
         gui.click(x=x+5,y=y+5) 
-        x,y,width,height = gui.locateOnScreen('2.png', grayscale=True)
+        x,y,width,height = gui.locateOnScreen('2.png', grayscale=False)
         print("2.png Found!: x=" + str(x) + ",y=" + str(y) + ",width=" + str(width) + ",height=" + str(height))
         gui.click(x=x+5,y=y+5) 
-        x,y,width,height = gui.locateOnScreen('x.png', grayscale=True)
+        x,y,width,height = gui.locateOnScreen('x.png', grayscale=False)
         print("x.png Found!: x=" + str(x) + ",y=" + str(y) + ",width=" + str(width) + ",height=" + str(height))
         gui.click(x=x+5,y=y+5)
-        x,y,width,height = gui.locateOnScreen('9.png', grayscale=True)
+        x,y,width,height = gui.locateOnScreen('9.png', grayscale=False)
         print("9.png Found!: x=" + str(x) + ",y=" + str(y) + ",width=" + str(width) + ",height=" + str(height))
         gui.click(x=x+5,y=y+5)
-        x,y,width,height = gui.locateOnScreen('equal.png', grayscale=True)
+        x,y,width,height = gui.locateOnScreen('equal.png', grayscale=False)
         print("equal.png Found!: x=" + str(x) + ",y=" + str(y) + ",width=" + str(width) + ",height=" + str(height))
         gui.click(x=x+5,y=y+5)
     except:
