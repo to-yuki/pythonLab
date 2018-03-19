@@ -3,7 +3,10 @@ import openpyxl
 
 # Excel ファイルをロード  
 book = openpyxl.load_workbook(filename="test.xlsx",data_only=True)
-#book = openpyxl.load_workbook(filename="test.xlsx",data_only=False)
+# 1番目のシートにアクセス
+sheet = book.get_sheet_by_name(sheetnames[0])
+
+
 
 # Excel シート名のリスト取得
 sheetnames = book.get_sheet_names()

@@ -16,20 +16,24 @@ for r in range(1,sheet.max_row+1):
     data = sheet.cell(row=r,column=1).value
     list.append(data)
 
+# 正規表現文字列のコンパイル
+pattern = re.compile(r"TRANSLATED_TEXT='(.*?)'")
+# GoogleTranslateURL
+url = u'https://translate.google.com/?hl=ja#en/ja/'
+#行カウンタのリセット
 r=0
+
 for origin in list:
     if origin == None:
         continue;
     try:
-        #origin = u'Automate your work with Python.'
-        url = u'https://translate.google.com/?hl=ja#en/ja/'
+        
         response = requests.get(url, params={'q': origin})
-
-        # resopnse 内にある JavaScript コードから翻訳された
-        # 文字列を取得 TRANSLATED_TEXT='(翻訳されて文字列)'
-        pattern = r"TRANSLATED_TEXT='(.*?)'"
-        transValue = re.search(pattern,response.text).group(1)
+        # resopnse 内にある JavaScript コードから翻訳された文字列を取得
+        transValue = pattern.search(response.text).group(1)
+        # ExcelSheetに書き込み
         sheet.cell(row=r+1,column=2).value = transValue
+
         print(u"\n[translate.google.com] で翻訳") 
         print(u"英語:"), 
         print(origin)
@@ -37,6 +41,6 @@ for origin in list:
         print(transValue)
         r+=1
     except:
-        print("IOError")
+        print(str(r)+u"行目がエラーになりました。"),
 # ワークブックの保存
 book.save("GoogleTransExcel-OK.xlsx")
