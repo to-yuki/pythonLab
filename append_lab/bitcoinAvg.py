@@ -8,7 +8,7 @@ import locale
 locale.setlocale(locale.LC_ALL,"Japanese")
 
 # coin List
-coins = [[1,  'BTC',  'btc_jpy'],[2,  'XEM',  'xem_jpy'],[3,  'MONA', 'mona_jpy']]
+coins = [[1,'BTC','btc_jpy'],[2,'XEM','xem_jpy'],[3,'MONA','mona_jpy']]
 # Zaif
 url = 'https://api.zaif.jp/api/1/last_price/'
 
