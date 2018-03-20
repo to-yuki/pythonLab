@@ -30,7 +30,7 @@ try:
     list = soup.find_all("img")
 
     # 保存ファイル名
-    filename="imageLink.csv"
+    filename="imageLinks.csv"
 
     with open(filename,"w") as f:
         for img in list:
